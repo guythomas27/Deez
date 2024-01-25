@@ -8,6 +8,7 @@ HighEstimate=0.03
 
 def clear():
 	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+
 debtwarning="Warning! you will possibly be in the negatives this month!"
 
 def daily(val1):
