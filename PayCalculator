@@ -1,4 +1,3 @@
-PayCalculator.txt
 pay=18
 tax=0.13
 workdays=4
@@ -54,9 +53,9 @@ def profitreport(val1):
 	print()
 
 def reminder():
-  clear()
-  print(f"Use daily() for estimates based off hours from one day.\nUse weekly() for estimates based off hours from one week.")
-  print(f"Use profitreport() to get an estimate based off hours from 2 weeks.\n\npay={pay}\ntax={tax}\nworkdays={workdays}\ndebt={debt}\nLowEstimate={LowEstimate}\nHighEstimate={HighEstimate}")
-  print()
+	clear()
+	print(f"Use daily() for estimates based off hours from one day.\nUse weekly() for estimates based off hours from one week.")
+	print(f"Use profitreport() to get an estimate based off hours from 2 weeks.\n\npay={pay}\ntax={tax}\nworkdays={workdays}\ndebt={debt}\nLowEstimate={LowEstimate}\nHighEstimate={HighEstimate}")
+	print()
 
 reminder()
