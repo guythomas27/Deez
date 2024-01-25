@@ -1,6 +1,7 @@
-pay=17.40
+PayCalculator.txt
+pay=18
 tax=0.13
-workdays=5
+workdays=4
 debt=0
 LowEstimate=0.05
 HighEstimate=0.03
@@ -12,41 +13,48 @@ def daily(val1):
 	val2=(val1*pay)-((val1*pay)*tax)
 	val3=val2*(workdays*2)
 	val4=val3*2
+	val5=(val4-(val4*LowEstimate))-debt;val6=(val4+(val4*HighEstimate))-debt
 	reminder()
 	print(f"Today you have made {round(val2,2)}.\nThis pay period you'll make very roughly {round(val3-(val3*LowEstimate),2)} - {round(val3+(val3*HighEstimate),2)}.")
 	print(f"This month you'll make very (VERY) roughly {round(val4-(val4*LowEstimate),2)} - {round(val4+(val4*HighEstimate),2)} in profit")
 	if debt>0:
-		print(f"You have {debt} remaining to pay as debt.\nAfter paying debt you will have made {round((val4-(val4*LowEstimate)-debt),2)} - {round((val4+(val4*HighEstimate)-debt),2)} in profit")
+		print(f"You have {debt} remaining to pay as debt.\nAfter paying debt you will have made {round(val5,2)} - {round(val6,2)} in profit")
+	if val5<0:
+		print("Warning! you will possibly be in the negatives this month!")
 	print()
 
 def weekly(val1):
 	val2=(val1*pay)-((val1*pay)*tax)
 	val3=val2*2
 	val4=val3*2
+	val5=(val4-(val4*LowEstimate))-debt;val6=(val4+(val4*HighEstimate))-debt
 	reminder()
 	print(f"This week you have made {round(val2,2)}.\nThis pay period you'll make roughly {round(val3-(val3*LowEstimate),2)} - {round(val3+(val3*HighEstimate),2)}.")
 	print(f"This month you'll have made (very) roughly {round(val4-(val4*LowEstimate),2)} - {round(val4+(val4*HighEstimate),2)} in profit")
 	if debt>0:
-		print(f"You have {debt} remaining to pay as debt.\nAfter paying debt you will have made {round((val4-(val4*LowEstimate)-debt),2)} - {round((val4+(val4*HighEstimate)-debt),2)} in profit")
+		print(f"You have {debt} remaining to pay as debt.\nAfter paying debt you will have made {round(val5,2)} - {round(val6,2)} in profit")
+	if val5<0:
+		print("Warning! You will possibly be in the negatives this month!")
 	print()
 
-# made by Guy Cordell (Nebula the protogen or something)
+
 def profitreport(val1):
 	val2=(val1*pay)-((val1*pay)*tax)
 	val3=val2*2
 	val4=val3-debt
+	val5=(val4-(val4*LowEstimate))-debt;val6=(val4+(val4*HighEstimate)-debt
 	reminder()
 	print(f"This pay period you have made {round(val2,2)} in profit.\nThis month's gross earnings will be {round(val3-(val3*LowEstimate),2)} - {round(val3+(val3*HighEstimate),2)}.")
 	if debt>0:
-		print(f"You have {debt} remaining to pay as debt.\nAfter paying debt, it will be {round(val4-(val4*LowEstimate),2)} - {round(val4+(val4*HighEstimate),2)}.")
+		print(f"You have {debt} remaining to pay as debt.\nAfter paying debt, it will be {round(val5,2)} - {round(val6,2)}.")
+	if val5<0:
+		print("Warning! You will be in the negatives this month!")
 	print()
 
 def reminder():
-	clear()
-	print("Made by Guy Cordell aka @5nebula5 on discord")
-	print()
-	print(f"Use daily() for estimates based off hours from one day.\nUse weekly() for estimates based off hours from one week.")
-	print(f"Use profitreport() to get an estimate based off hours from 2 weeks.\n\npay={pay}\ntax={tax}\nworkdays={workdays}\ndebt={debt}\nLowEstimate={LowEstimate}\nHighEstimate={HighEstimate}")
-	print()
+  clear()
+  print(f"Use daily() for estimates based off hours from one day.\nUse weekly() for estimates based off hours from one week.")
+  print(f"Use profitreport() to get an estimate based off hours from 2 weeks.\n\npay={pay}\ntax={tax}\nworkdays={workdays}\ndebt={debt}\nLowEstimate={LowEstimate}\nHighEstimate={HighEstimate}")
+  print()
 
 reminder()
