@@ -42,7 +42,7 @@ def profitreport(val1):
 	val2=(val1*pay)-((val1*pay)*tax)
 	val3=val2*2
 	val4=val3-debt
-	val5=(val4-(val4*LowEstimate))-debt;val6=(val4+(val4*HighEstimate)-debt
+	val5=(val4-(val4*LowEstimate))-debt;val6=(val4+(val4*HighEstimate))-debt
 	reminder()
 	print(f"This pay period you have made {round(val2,2)} in profit.\nThis month's gross earnings will be {round(val3-(val3*LowEstimate),2)} - {round(val3+(val3*HighEstimate),2)}.")
 	if debt>0:
