@@ -30,7 +30,7 @@ def weekly(val1):
 		print(f"You have {debt} remaining to pay as debt.\nAfter paying debt you will have made {round((val4-(val4*LowEstimate)-debt),2)} - {round((val4+(val4*HighEstimate)-debt),2)} in profit")
 	print()
 
-
+# made by Guy Cordell (Nebula the protogen or something)
 def profitreport(val1):
 	val2=(val1*pay)-((val1*pay)*tax)
 	val3=val2*2
@@ -42,9 +42,11 @@ def profitreport(val1):
 	print()
 
 def reminder():
-  clear()
-  print(f"Use daily() for estimates based off hours from one day.\nUse weekly() for estimates based off hours from one week.")
-  print(f"Use profitreport() to get an estimate based off hours from 2 weeks.\n\npay={pay}\ntax={tax}\nworkdays={workdays}\ndebt={debt}\nLowEstimate={LowEstimate}\nHighEstimate={HighEstimate}")
-  print()
+	clear()
+	print("Made by Guy Cordell aka @5nebula5 on discord")
+	print()
+	print(f"Use daily() for estimates based off hours from one day.\nUse weekly() for estimates based off hours from one week.")
+	print(f"Use profitreport() to get an estimate based off hours from 2 weeks.\n\npay={pay}\ntax={tax}\nworkdays={workdays}\ndebt={debt}\nLowEstimate={LowEstimate}\nHighEstimate={HighEstimate}")
+	print()
 
 reminder()
