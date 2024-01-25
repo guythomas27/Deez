@@ -8,6 +8,7 @@ HighEstimate=0.03
 
 def clear():
 	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+debtwarning="Warning! you will possibly be in the negatives this month!"
 
 def daily(val1):
 	val2=(val1*pay)-((val1*pay)*tax)
@@ -20,7 +21,7 @@ def daily(val1):
 	if debt>0:
 		print(f"You have {debt} remaining to pay as debt.\nAfter paying debt you will have made {round(val5,2)} - {round(val6,2)} in profit")
 	if val5<0:
-		print("Warning! you will possibly be in the negatives this month!")
+		print(debtwarning)
 	print()
 
 def weekly(val1):
@@ -34,7 +35,7 @@ def weekly(val1):
 	if debt>0:
 		print(f"You have {debt} remaining to pay as debt.\nAfter paying debt you will have made {round(val5,2)} - {round(val6,2)} in profit")
 	if val5<0:
-		print("Warning! You will possibly be in the negatives this month!")
+		print(debtwarning)
 	print()
 
 
@@ -48,7 +49,7 @@ def profitreport(val1):
 	if debt>0:
 		print(f"You have {debt} remaining to pay as debt.\nAfter paying debt, it will be {round(val5,2)} - {round(val6,2)}.")
 	if val5<0:
-		print("Warning! You will be in the negatives this month!")
+		print(debtwarning)
 	print()
 
 def reminder():
