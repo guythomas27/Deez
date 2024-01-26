@@ -3,8 +3,12 @@ import os
 def clear():
 	os.system("cls")
 
-
 debtwarning="Warning! you will possibly be in the negatives this month!"
+
+def reminder():
+	clear()
+	print(f"Parameters\n\npay={pay}\ntax={tax}\nworkdays={workdays}\ndebt={debt}\nLowEstimate={LowEstimate}\nHighEstimate={HighEstimate}")
+	print()
 
 def Daily(DailyAmount):
 	DailyPay=(DailyAmount*pay)-((DailyAmount*pay)*tax)
@@ -47,11 +51,6 @@ def Biweekly(BiweeklyAmount):
 		print(debtwarning)
 	print()
 
-def reminder():
-	clear()
-	print(f"Parameters\n\npay={pay}\ntax={tax}\nworkdays={workdays}\ndebt={debt}\nLowEstimate={LowEstimate}\nHighEstimate={HighEstimate}")
-	print()
-
 def questions():
 	reminder()
 	global pay,tax,workdays,debt,LowEstimate,HighEstimate
@@ -63,7 +62,6 @@ def questions():
 	HighEstimate=float(input("How much do you want the high-end of the estimate to be? (Format it like x.xx. Ex: 0.03 equals 3%)\n"));reminder()
 	def Main_Menu():
 		reminder()
-		global Main_Menu_Options
 		Main_Menu_Options=input("Do you want to calculate your earnings based off Day, Week, or Biweek?\nType Customize to recustomize your parameters.\n")
 		if Main_Menu_Options == "Day" or Main_Menu_Options == "day":
 			DailyAmount=int(input("How many hours did you work today?\n"))
@@ -98,9 +96,6 @@ def questions():
 		else:
 			reminder();questions()
 	Main_Menu()
-
-
-    
 
 pay=0
 tax=0.13
