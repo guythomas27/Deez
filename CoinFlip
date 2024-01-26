@@ -13,12 +13,15 @@ def Start():
 		import time
 		print(".");time.sleep(1);print(".");time.sleep(1);print(".");time.sleep(1);clear()
 		import random
-		Coin="HT"
-		if choice==(random.seed(Coin)):
-			TryAgain=input("You win! Try again? Y/N\n")
+		Coin=("H","T")
+		if choice==(random.choice(Coin)):
+			print("You win! Try again?")
+			TryAgain=input("Y/N\n")
 			if TryAgain=="y" or TryAgain=="Y":
 				Start()
-			TryAgain=input("You lose! Try again? Y/N\n")
+		else:
+			print("You lose! Try again?")
+			TryAgain=input("Y/N\n")
 			if TryAgain=="y" or TryAgain=="Y":
 				Start()
 			
