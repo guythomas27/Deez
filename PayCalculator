@@ -60,7 +60,7 @@ def questions():
 	workdays=float(input("How many days a week do you work?\n"));reminder()
 	debt=float(input("What debt, if any, do you have?\n"));reminder()
 	LowEstimate=float(input("How much do you want the low-end of the estimate to be? (Format it like x.xx. Ex: 0.05 equals 5%)\n"));reminder()
-	HighEstimate=float(input("How much do you want the high-end of the estimate to be? (Format it like x.xx. Ex: 0.05 equals 5%)\n"));reminder()
+	HighEstimate=float(input("How much do you want the high-end of the estimate to be? (Format it like x.xx. Ex: 0.03 equals 3%)\n"));reminder()
 	def Main_Menu():
 		reminder()
 		global Main_Menu_Options
@@ -68,22 +68,22 @@ def questions():
 		if Main_Menu_Options == "Day" or Main_Menu_Options == "day":
 			DailyAmount=int(input("How many hours did you work today?\n"))
 			reminder();Daily(DailyAmount)
-			deez = input("Restart? y/n\n")
-			if deez == "y":
+			deez = input("Type Restart to restart.\n")
+			if deez == "Restart" or deez =="restart":
 				Main_Menu()
 				
 		if Main_Menu_Options == "Week" or Main_Menu_Options == "week":
 			WeeklyAmount=int(input("How many hours did you work this week?\n"))
 			reminder();Weekly(WeeklyAmount)
-			deez = input("Restart? y/n\n")
-			if deez == "y":
+			deez = input("Type Restart to restart.\n")
+			if deez == "Restart" or deez =="restart":
 				Main_Menu()
 			
 		if Main_Menu_Options == "Biweek" or Main_Menu_Options == "biweek":
 			BiweeklyAmount=int(input("How many hours did you work this biweek?\n"))
 			reminder();Biweekly(BiweeklyAmount)
-			deez = input("Restart? y/n\n")
-			if deez == "y":
+			deez = input("Type Restart to restart.\n")
+			if deez == "Restart" or deez =="restart":
 				Main_Menu()
 			
 		if Main_Menu_Options == "Customize" or Main_Menu_Options == "customize":
