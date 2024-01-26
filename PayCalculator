@@ -25,7 +25,7 @@ def Weekly(WeeklyAmount):
 	MonthlyPay=BiweeklyPay*2
 	MonthlyPayLow=(MonthlyPay-(MonthlyPay*LowEstimate))-debt;MonthlyPayHigh=(MonthlyPay+(MonthlyPay*HighEstimate))-debt
 	reminder()
-	print(f"This week you have made {round(BiweeklyPay,2)}.\nThis pay period you'll make roughly {round(BiweeklyPay-(BiweeklyPay*LowEstimate),2)} - {round(BiweeklyPay+(BiweeklyPay*HighEstimate),2)}.")
+	print(f"This week you have made {round(WeeklyPay,2)}.\nThis pay period you'll make roughly {round(BiweeklyPay-(BiweeklyPay*LowEstimate),2)} - {round(BiweeklyPay+(BiweeklyPay*HighEstimate),2)}.")
 	print(f"This month you'll have made (very) roughly {round(MonthlyPay-(MonthlyPay*LowEstimate),2)} - {round(MonthlyPay+(MonthlyPay*HighEstimate),2)} in profit")
 	if debt>0:
 		print(f"You have {debt} remaining to pay as debt.\nAfter paying debt you will have made {round(MonthlyPayLow,2)} - {round(MonthlyPayHigh,2)} in profit")
