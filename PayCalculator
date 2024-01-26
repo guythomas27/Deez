@@ -4,6 +4,7 @@ def clear():
 	cl="\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 	print(cl*100)
 
+
 debtwarning="Warning! you will possibly be in the negatives this month!"
 
 def Daily(DailyAmount):
