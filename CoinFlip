@@ -1,0 +1,27 @@
+def clear():
+	print("\n"*300)
+
+
+def Start():
+	global choice
+	clear()
+	choice=input("It's time for a coinflip! Heads or tails?\nType H or T.\n")
+	clear()
+	print("Let's see if you win!\n")
+	def CoinFlip():
+		global choice,TryAgain
+		import time
+		print(".");time.sleep(1);print(".");time.sleep(1);print(".");time.sleep(1);clear()
+		import random
+		Coin="HT"
+		if choice==(random.seed(Coin)):
+			TryAgain=input("You win! Try again? Y/N\n")
+			if TryAgain=="y" or TryAgain=="Y":
+				Start()
+			TryAgain=input("You lose! Try again? Y/N\n")
+			if TryAgain=="y" or TryAgain=="Y":
+				Start()
+			
+	CoinFlip()
+
+Start()
