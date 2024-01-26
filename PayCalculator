@@ -64,27 +64,29 @@ def questions():
 	def Main_Menu():
 		reminder()
 		global Main_Menu_Options
-		Main_Menu_Options=input("Do you want to calculate your earnings based off Day, Week, or Biweek?\n")
+		Main_Menu_Options=input("Do you want to calculate your earnings based off Day, Week, or Biweek?\nType Customize to recustomize your parameters.\n")
 		if Main_Menu_Options == "Day" or "day":
 			DailyAmount=int(input("How many hours did you work today?\n"))
 			reminder();Daily(DailyAmount)
 			deez = input("Restart? y/n\n")
 			if deez == "y":
-				questions()
+				Main_Menu()
 				
 		if Main_Menu_Options == "Week" or "week":
 			WeeklyAmount=int(input("How many hours did you work this week?\n"))
 			reminder();Weekly(WeeklyAmount)
 			deez = input("Restart? y/n\n")
 			if deez == "y":
-				questions()
+				Main_Menu()
 			
 		if Main_Menu_Options == "Biweek" or "biweek":
 			BiweeklyAmount=int(input("How many hours did you work this biweek?\n"))
 			reminder();Biweekly(BiweeklyAmount)
 			deez = input("Restart? y/n\n")
 			if deez == "y":
-				questions()
+				Main_Menu()
+		if Main_Menu_Options == "customize" or "Customize":
+			questions()
 		
 	Main_Menu()
 
