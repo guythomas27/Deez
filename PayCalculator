@@ -72,12 +72,17 @@ def questions():
 			deez = input("Type Restart to restart.\n")
 			if deez == "Restart" or deez =="restart":
 				Main_Menu()
+			else:
+				Main_Menu()
+			
 				
 		if Main_Menu_Options == "Week" or Main_Menu_Options == "week":
 			WeeklyAmount=int(input("How many hours did you work this week?\n"))
 			reminder();Weekly(WeeklyAmount)
 			deez = input("Type Restart to restart.\n")
 			if deez == "Restart" or deez =="restart":
+				Main_Menu()
+			else:
 				Main_Menu()
 			
 		if Main_Menu_Options == "Biweek" or Main_Menu_Options == "biweek":
@@ -86,7 +91,12 @@ def questions():
 			deez = input("Type Restart to restart.\n")
 			if deez == "Restart" or deez =="restart":
 				Main_Menu()
+			else:
+				Main_Menu()
+			
 		if Main_Menu_Options == "Customize" or Main_Menu_Options == "customize":
+			reminder();questions()
+		else:
 			reminder();questions()
 	Main_Menu()
 
