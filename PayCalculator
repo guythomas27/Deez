@@ -85,11 +85,8 @@ def questions():
 			deez = input("Type Restart to restart.\n")
 			if deez == "Restart" or deez =="restart":
 				Main_Menu()
-
 		if Main_Menu_Options == "Customize" or Main_Menu_Options == "customize":
-			reminder()
-			questions()
-		
+			reminder();questions()
 	Main_Menu()
 
 
