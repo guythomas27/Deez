@@ -1,7 +1,7 @@
 
 
 def clear():
-	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 
 debtwarning="Warning! you will possibly be in the negatives this month!"
 
@@ -85,7 +85,7 @@ def questions():
 			deez = input("Type Restart to restart.\n")
 			if deez == "Restart" or deez =="restart":
 				Main_Menu()
-			
+
 		if Main_Menu_Options == "Customize" or Main_Menu_Options == "customize":
 			reminder()
 			questions()
