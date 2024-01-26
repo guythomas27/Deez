@@ -9,7 +9,7 @@ def Daily(DailyAmount):
 	DailyPay=(DailyAmount*pay)-((DailyAmount*pay)*tax)
 	BiweeklyPay=DailyPay*(workdays*2)
 	MonthlyPay=BiweeklyPay*2
-	MonthlyPayLow=(BiweeklyPay-(BiweeklyPay*LowEstimate))-debt;MonthlyPayHigh=(BiweeklyPay+(BiweeklyPay*HighEstimate))-debt
+	MonthlyPayLow=(MonthlyPay-(MonthlyPay*LowEstimate))-debt;MonthlyPayHigh=(MonthlyPay+(MonthlyPay*HighEstimate))-debt
 	reminder()
 	print(f"Today you have made {round(DailyPay,2)}.\nThis pay period you'll make very roughly {round(BiweeklyPay-(BiweeklyPay*LowEstimate),2)} - {round(BiweeklyPay+(BiweeklyPay*HighEstimate),2)}.")
 	print(f"This month you'll make very (VERY) roughly {round(MonthlyPay-(MonthlyPay*LowEstimate),2)} - {round(MonthlyPay+(MonthlyPay*HighEstimate),2)} in profit")
