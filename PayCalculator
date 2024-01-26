@@ -1,7 +1,8 @@
 
-
 def clear():
-	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+	global cl
+	cl="\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+	print(cl*100)
 
 debtwarning="Warning! you will possibly be in the negatives this month!"
 
@@ -48,8 +49,7 @@ def Biweekly(BiweeklyAmount):
 
 def reminder():
 	clear()
-	print(f"Use daily([number]) for estimates based off hours from one day.\nUse weekly([number]) for estimates based off hours from one week.")
-	print(f"Use profitreport([number]) to get an estimate based off hours from 2 weeks.\n\npay={pay}\ntax={tax}\nworkdays={workdays}\ndebt={debt}\nLowEstimate={LowEstimate}\nHighEstimate={HighEstimate}")
+	print(f"Parameters\n\npay={pay}\ntax={tax}\nworkdays={workdays}\ndebt={debt}\nLowEstimate={LowEstimate}\nHighEstimate={HighEstimate}")
 	print()
 
 def questions():
